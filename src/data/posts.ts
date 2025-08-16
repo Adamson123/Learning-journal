@@ -1,5 +1,4 @@
 import heroImage from "/assets/hero.png";
-import blog1Image from "/assets/blog/blog-1.png";
 import blog2Image from "/assets/blog/blog-2.png";
 import blog3Image from "/assets/blog/blog-3.png";
 import blog4Image from "/assets/blog/blog-4.png";
