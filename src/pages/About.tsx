@@ -1,4 +1,5 @@
 import Posts from "../components/Posts";
+import posts from "../data/posts";
 import bloggerImage from "/blogger.png";
 
 const About = () => {
@@ -62,7 +63,7 @@ const About = () => {
                         Recent posts
                     </h3>
                     <Posts
-                        amount={3}
+                        posts={posts.slice(0, 3)}
                         showViewMore={false}
                         blogCardStyle="max-w-full"
                     />

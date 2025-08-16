@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
-import posts from "../data/posts";
+import allPosts, { type PostsTypes } from "../data/posts";
 
 const Posts = ({
-    amount = posts.length,
+    posts = allPosts,
     showViewMore = true,
     blogCardStyle,
 }: {
-    amount?: number;
+    posts?: PostsTypes;
     showViewMore?: boolean;
     blogCardStyle?: string;
 }) => {
     return (
         <div className="flex flex-col gap-7 md:gap-[53px] items-center">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-[26px]">
-                {posts.slice(0, amount).map((blog, i) => (
-                    <div
+                {posts.map((blog, i) => (
+                    <Link
+                        to={"/post/" + blog.id}
                         key={i}
                         className={`flex flex-col gap-3 max-w-[500px] cursor-pointer hover-on-container ${blogCardStyle}`}
                     >
@@ -32,7 +33,7 @@ const Posts = ({
                                 {blog.subtitle}
                             </p>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
             {showViewMore && (
