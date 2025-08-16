@@ -1,3 +1,4 @@
+import heroImage from "/assets/hero.png";
 import blog1Image from "/assets/blog/blog-1.png";
 import blog2Image from "/assets/blog/blog-2.png";
 import blog3Image from "/assets/blog/blog-3.png";
@@ -9,7 +10,7 @@ import blog7Image from "/assets/blog/blog-7.png";
 const posts = [
     {
         id: "1",
-        image: blog1Image,
+        image: heroImage,
         date: "JULY 23, 2022",
         title: "My new journey as a bootcamp student.",
         subtitle: `After several months of learning in the Frontend Developer Career Path, I've made the big
